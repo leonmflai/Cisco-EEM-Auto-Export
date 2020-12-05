@@ -3,10 +3,25 @@
  event none
  action 0.1 info type routername
  action 1.0 cli command "enable"
- action 1.1 cli command "configure terminal"
- action 1.2 cli command "file prompt quiet"
- action 1.3 cli command "do copy run flash:$_info_routername-config_$_event_pub_sec"
- action 1.4 cli command "do copy run ftp://cisco:Cisco1234!@172.31.63.199/$_info_routername-config_$_event_pub_sec"
- action 2.0 cli command "file prompt alert"
- action 3.0 puts "$_info_routername-config_$_event_pub_sec"
- action 4.0 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"
+ action 1.1 cli command "show clock"
+ action 1.2 regexp "(2[0-3]|[01][0-9])" "$_cli_result" match hour
+ action 1.3 puts "$hour"
+ action 1.4 cli command "show clock"
+ action 1.5 regexp "(2[0-3]|[01][0-9]):([0-6][0-9]):([0-6][0-9])" "$_cli_result" time hour minute second
+ action 1.6 puts "$time"
+ action 1.7 puts "$hour"
+ action 1.8 puts "$minute"
+ action 1.9 puts "$second"
+ action 2.0 cli command "show clock"
+ action 2.1 regexp "(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (0[1-9]|[1-2][0-9]|3[0-1]) (20[1-9][0-9])" "$_cli_result" time2 month day year
+ action 2.2 puts "$time2"
+ action 2.3 puts "$month"
+ action 2.4 puts "$day"
+ action 2.5 puts "$year"
+ action 3.1 cli command "configure terminal"
+ action 3.2 cli command "file prompt quiet"
+ action 3.3 cli command "do copy run flash:$_info_routername-config_$_event_pub_sec"
+ action 3.4 cli command "do copy run ftp://cisco:Cisco1234!@172.31.63.199/$_info_routername-config_$_event_pub_sec"
+ action 3.5 cli command "file prompt alert"
+ action 3.6 puts "$_info_routername-config_$_event_pub_sec"
+ action 3.7 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"
