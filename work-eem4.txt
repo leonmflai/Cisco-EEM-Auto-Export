@@ -1,4 +1,4 @@
-event manager applet Backup-Running-Config-To-TFTP
+.event manager applet Backup-Running-Config-To-TFTP
  description Backup-Running-Config-To-TFTP
  event none
  action 0.1 info type routername
