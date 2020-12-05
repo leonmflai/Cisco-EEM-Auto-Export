@@ -1,0 +1,12 @@
+event manager applet Backup-Running-Config-To-TFTP
+ description Backup-Running-Config-To-TFTP
+ event none
+ action 0.1 info type routername
+ action 1.0 cli command "enable"
+ action 1.1 cli command "configure term"
+ action 1.2 cli command "file prompt quiet"
+ action 1.3 cli command "do copy run flash:$_info_routername-config_$_event_pub_sec"
+ action 1.4 cli command "do copy run ftp://cisco:Cisco1234!@172.31.63.199/$_info_routername-config_$_event_pub_sec"
+ action 2.0 cli command "file prompt alert"
+ action 3.0 puts "$_info_routername-config_$_event_pub_sec"
+ action 4.0 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"
