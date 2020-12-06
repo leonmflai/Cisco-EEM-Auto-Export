@@ -1,24 +1,30 @@
 .event manager applet Backup-Running-Config-To-TFTP
  description Backup-Running-Config-To-TFTP
  event none
- action 0.1 info type routername
- action 1.0 cli command "enable"
- action 1.1 cli command "show clock"
- action 1.2 regexp "(2[0-3]|[01][0-9]):([0-6][0-9]):([0-6][0-9])" "$_cli_result" time hour minute second
- action 1.3 puts "$time"
- action 1.4 puts "$hour"
- action 1.5 puts "$minute"
- action 1.6 puts "$second"
- action 2.0 cli command "show clock"
- action 2.1 regexp "(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (0[1-9]|[1-2][0-9]|3[0-1]) (20[1-9][0-9])" "$_cli_result" time2 month day year
- action 2.2 puts "$time2"
- action 2.3 puts "$month"
- action 2.4 puts "$day"
- action 2.5 puts "$year"
- action 3.1 cli command "configure terminal"
- action 3.2 cli command "file prompt quiet"
- action 3.3 cli command "do copy run flash:$_info_routername-config_$_event_pub_sec"
- action 3.4 cli command "do copy run ftp://cisco:Cisco1234!@172.31.63.199/$_info_routername-config_$_event_pub_sec"
- action 3.5 cli command "file prompt alert"
- action 3.6 puts "$_info_routername-config_$_event_pub_sec"
- action 3.7 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"
+ action 0.01  info type routername
+ action 1.01 cli command "enable"
+ action 1.02 cli command "show clock"
+ action 1.03 regexp "(2[0-3]|[01][0-9]):([0-6][0-9]):([0-6][0-9])" "$_cli_result" time hour minute second
+ action 1.04 puts "$time"
+ action 1.05 puts "$hour"
+ action 1.06 puts "$minute"
+ action 1.07 puts "$second"
+ action 1.11 cli command "show clock"
+ action 1.12 regexp "(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([1-9]|0[1-9]|[1-2][0-9]|3[0-1]) (20[1-9][0-9])" "$_cli_result" time2 month day year
+ action 1.13 puts "$time2"
+ action 1.14 puts "$month"
+ action 1.15 puts "$day"
+ action 1.16 puts "$year"
+ action 2.01 cli command "configure term"
+ action 2.02 cli command "file prompt quiet"
+ action 2.03 cli command "do copy run flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.04 cli command "do show inventory | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.05 cli command "do show version | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.06 cli command "do show process mem sorted | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.07 cli command "do show interface status | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.08 cli command "do show interface | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.09 cli command "do show clock | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.10 cli command "do copy flash:$_info_routername-$year$month$day-$hour$minute$second.txt ftp://cisco:Cisco1234!@172.31.63.199/$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 3.01 cli command "file prompt alert"
+ action 3.02 puts "$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 4.01 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"
