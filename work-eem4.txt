@@ -1,6 +1,6 @@
 event manager applet PM_Health_Check-To-FTP
  description PM_Health_Check-To-FTP
- event none
+ event timer cron name Daily cron-entry "05 02 * * *"
  action 0.01  info type routername
  action 1.01 cli command "enable"
  action 1.02 cli command "show clock"
