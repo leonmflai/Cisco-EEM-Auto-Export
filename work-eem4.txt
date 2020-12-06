@@ -1,5 +1,5 @@
-event manager applet Backup-Running-Config-To-TFTP
- description Backup-Running-Config-To-TFTP
+event manager applet PM_Health_Check-To-FTP
+ description PM_Health_Check-To-FTP
  event none
  action 0.01  info type routername
  action 1.01 cli command "enable"
