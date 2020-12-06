@@ -24,7 +24,7 @@
  action 2.07 cli command "do show interface status | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
  action 2.08 cli command "do show interface | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
  action 2.09 cli command "do show clock | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
- action 2.10 cli command "do copy flash:$_info_routername-$year$month$day-$hour$minute$second.txt ftp://cisco:Cisco1234!@172.31.63.199/$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.10 cli command "do copy flash:$_info_routername-$year$month$day-$hour$minute$second.txt ftp://{FTP_User}:{FTP_Password}@{FTP_Server}/$_info_routername-$year$month$day-$hour$minute$second.txt"
  action 3.01 cli command "file prompt alert"
  action 3.02 puts "$_info_routername-$year$month$day-$hour$minute$second.txt"
  action 4.01 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"
