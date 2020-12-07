@@ -15,7 +15,7 @@ event manager applet PM_Health_Check-To-FTP
  action 1.14 puts "$month"
  action 1.15 puts "$day"
  action 1.16 puts "$year"
- action 2.01 cli command "configure term"
+ action 2.01 cli command "configure terminal"
  action 2.02 cli command "file prompt quiet"
  action 2.03 cli command "do copy run flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
  action 2.04 cli command "do show inventory | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
