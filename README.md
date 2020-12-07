@@ -1,4 +1,3 @@
 # Cisco-EEM-Auto-Export
 Cisco-EEM-Auto-Export
-Cisco-EEM-Auto-Export
-Cisco-EEM-Auto-Export This is a EEM Testing Scripts
+This is a EEM Testing Scripts
