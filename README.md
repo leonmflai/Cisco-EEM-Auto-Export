@@ -2,8 +2,8 @@
 
 This is the readme file for my first GitHub project
 
-*Cisco-EEM-Auto-Export
-*In typical network infrastructure design, network devices configuration /setting including routers, switches , , wireless controllers are maintained individually. There is no *centralized location to store, backup, consolidate the setting, status, snapshot of these networking devices. 
+*Cisco-EEM-Auto-Export*
+In typical network infrastructure design, network devices configuration /setting including routers, switches , , wireless controllers are maintained individually. There is no *centralized location to store, backup, consolidate the setting, status, snapshot of these networking devices. 
 
 With latest API, configuration management tools like Python RestAPI, YANG, NetCONF, RestCONF, JSON/XML, Ansible, Puppet, Terraform, there are plenty of channels to retrieve the output, status, settings of the network devices. Some network management platform or plugin like Solarwinds NCM, ManageEngine Network Configuration Manager can support more advanced configuration management like regular configuration, setting backup or even execute configuration change in predefined schedule. 
 
