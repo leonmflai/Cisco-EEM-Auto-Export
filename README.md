@@ -10,6 +10,15 @@ This makes network administrators or vendors whom provide maintenance support di
 ## Cisco IOS Embedded Event Manager (EEM)
 Starting from Cisco IOS version 12.3(4)T, 12.0(26)S in long time ago, Cisco introduced a feature called [Embedded Event Manager] (https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-embedded-event-manager-eem/index.html) (EEM). EEM is a powerful and flexible subsystem that provides real-time network event detection and onboard automation. It gives you the ability to adapt the behavior of your network devices to align with your business needs.
 
+## What Cisco-EEM-Auto-Export does?
+
+
+
+## What IOS version and Devices can support this EEM script?
+
+## Virtual Environment for Testing
+
+
 
 
 With latest API, configuration management tools like Python RestAPI, YANG, NetCONF, RestCONF, JSON/XML, Ansible, Puppet, Terraform, there are plenty of channels to retrieve the output, status, settings of the network devices. Some network management platform or plugin like Solarwinds NCM, ManageEngine Network Configuration Manager can support more advanced configuration management like regular configuration, setting backup or even execute configuration change in predefined schedule. 
