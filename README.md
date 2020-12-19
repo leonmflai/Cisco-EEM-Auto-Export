@@ -93,6 +93,13 @@ For details, refer to [EEM Built-in "Action" Variables](https://community.cisco.
 
 ### Backup File Name including Timestamp 
 
+Actually, there is EEM built-in variable for timestamp information when the EEM runs. The variable name is **$_event_pub_sec**
+
+However, this variable will return timestamp in EPOCH format. To be more precise, we have to leverage the **"show clock"** with **regular expression** engine to parse timestamp information into second, minute, hour, day of month, month, year information.
+
+Sample **show clock** output
+
+```01:58:40.092 HKT Sun Dec 20 2020'''
 
 
 
