@@ -35,13 +35,10 @@ For details of version and device compatiblity for EEM 4.0, please visit [Cisco 
 To install the script. Login to router or switch at "enable" mode and then "configure terminal" mode
 
 ### Enter Configure Terminal mode
-'''
-configure terminal
-'''
+'''configure terminal'''
 
 ### Input the script
-'''
- event manager applet PM_Health_Check-To-FTP
+'''event manager applet PM_Health_Check-To-FTP
  description PreventiveMaint_Health_Check-To-FTP
  event timer cron name Daily cron-entry "05 02 * * *"
  action 0.01  info type routername
@@ -70,8 +67,7 @@ configure terminal
  action 2.10 cli command "do copy flash:$_info_routername-$year$month$day-$hour$minute$second.txt ftp://{FTP_User}:{FTP_Password}@{FTP_Server}/$_info_routername-$year$month$day-$hour$minute$second.txt"
  action 3.01 cli command "file prompt alert"
  action 3.02 puts "$_info_routername-$year$month$day-$hour$minute$second.txt"
- action 4.01 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"
-'''
+ action 4.01 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"'''
 
 ## Elaboration of Scripts
 
