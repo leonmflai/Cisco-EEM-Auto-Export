@@ -8,7 +8,7 @@ In typical network infrastructure design, network devices configuration /setting
 This makes network administrators or vendors whom provide maintenance support difficult to understand the latest setting or status of the network devices in case of a device failure. 
 
 ## Cisco IOS Embedded Event Manager (EEM)
-Starting from Cisco IOS version 12.3(4)T, 12.0(26)S in long time ago, Cisco introduced a feature called [Embedded Event Manager] (https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-embedded-event-manager-eem/index.html) (EEM). EEM is a powerful and flexible subsystem that provides real-time network event detection and onboard automation. It gives you the ability to adapt the behavior of your network devices to align with your business needs.
+Starting from Cisco IOS version 12.3(4)T, 12.0(26)S in long time ago, Cisco introduced a feature called [Embedded Event Manager](https://www.cisco.com/c/en/us/products/ios-nx-os-software/ios-embedded-event-manager-eem/index.html) (EEM). EEM is a powerful and flexible subsystem that provides real-time network event detection and onboard automation. It gives you the ability to adapt the behavior of your network devices to align with your business needs.
 
 ## What Cisco-EEM-Auto-Export does?
 
@@ -18,7 +18,7 @@ Once this script run, it will collect corresponding CLI command automatically an
 
 ## What IOS version and Devices can support this EEM script?
 
-This script mainly utilizes "regexp" command in EEM command reference. According to Cisco command reference [Cisco EEM Command Reference] (https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/eem/command/eem-cr-book/eem-cr-a1.html#wp1168104291)
+This script mainly utilizes "regexp" command in EEM command reference. According to Cisco command reference [Cisco EEM Command Reference](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/eem/command/eem-cr-book/eem-cr-a1.html#wp1168104291)
 
 
 
