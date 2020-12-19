@@ -84,6 +84,7 @@ The syntax of **"event timer cron"** is very similar to Linux cron schedule. The
 ### Backup File Name including **device** hostname
 
 To include router / switch hostname in backup file name, we need following command
+
 ``` action 0.01  info type routername```
 
 **routername** is one of the default variable in EEM where **info type** command will instruct the EEM engine to call default variable
