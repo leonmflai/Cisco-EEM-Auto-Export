@@ -32,8 +32,12 @@ For details of version and device compatiblity for EEM 4.0, please visit [Cisco 
 
 ## Installation
 
+
+
+
 ## Elaboration of Scripts
 
+## Typical Network Diagram
 
 ## Virtual Environment for Testing
 
