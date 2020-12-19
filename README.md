@@ -3,8 +3,12 @@
 *This is the readme markdown file for my first GitHub project. Thanks so much for the enablement of Cisco HK team on DevNET solution enablment throughout Year 2020.*
 
 ## Background
-Cisco-EEM-Auto-Export
-In typical network infrastructure design, network devices configuration /setting including routers, switches , , wireless controllers are maintained individually. There is no *centralized location to store, backup, consolidate the setting, status, snapshot of these networking devices. 
+In typical network infrastructure design, network devices configuration /setting including routers, switches, firewall wireless controllers are maintained individually. There is no centralized location to store, backup, consolidate the setting, status, snapshot of these networking devices. 
+
+This makes network administrators or vendors whom provide maintenance support difficult to understand the latest setting or status of the network devices in case of a device failure. 
+
+## Cisco IOS Embedded Event Manager (EEM)
+
 
 With latest API, configuration management tools like Python RestAPI, YANG, NetCONF, RestCONF, JSON/XML, Ansible, Puppet, Terraform, there are plenty of channels to retrieve the output, status, settings of the network devices. Some network management platform or plugin like Solarwinds NCM, ManageEngine Network Configuration Manager can support more advanced configuration management like regular configuration, setting backup or even execute configuration change in predefined schedule. 
 
