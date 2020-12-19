@@ -18,7 +18,9 @@ Once this script run, it will collect corresponding CLI command automatically an
 
 ## What IOS version and Devices can support this EEM script?
 
-This script utilize "regexp" 
+This script mainly utilizes "regexp" command in EEM command reference. According to Cisco command reference [Cisco EEM Command Reference] (https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/eem/command/eem-cr-book/eem-cr-a1.html#wp1168104291)
+
+
 
 ## Installation
 
