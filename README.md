@@ -1,6 +1,6 @@
 # Cisco-EEM-Auto-Export
 
-This is the readme file for my first GitHub project
+*This is the readme markdown file for my first GitHub project. Thanks so much for the enablement of Cisco HK team on DevNET solution enablment throughout Year 2020.*
 
 ## Background
 Cisco-EEM-Auto-Export
