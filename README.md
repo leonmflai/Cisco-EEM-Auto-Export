@@ -12,11 +12,13 @@ Starting from Cisco IOS version 12.3(4)T, 12.0(26)S in long time ago, Cisco intr
 
 ## What Cisco-EEM-Auto-Export does?
 
+This script is sets of CLI command to be input to Cisco IOS or IOS-XE routers or switches. This script will run regularly as service. EEM engine will trigger this script to run automatically according to the configured interval in this EEM script.
 
+Once this script run, it will collect corresponding CLI command automatically and store the output to a local file and then store the file to a FTP server folder automatically.
 
 ## What IOS version and Devices can support this EEM script?
 
-
+This script utilize "regexp" 
 
 ## Installation
 
