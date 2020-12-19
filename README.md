@@ -107,7 +107,11 @@ Sample **show clock** output
 
 ### FTP the output file to server
 
- action 2.10 cli command "do copy flash:$_info_routername-$year$month$day-$hour$minute$second.txt ftp://{FTP_User}:{FTP_Password}@{FTP_Server}/
+To send out the backup file to FTP server, use following code.
+
+``` action 2.10 cli command "do copy flash:$_info_routername-$year$month$day-$hour$minute$second.txt ftp://{FTP_User}:{FTP_Password}@{FTP_Server}/ ```
+
+Please adjust the variable **{FTP_User}**, **{FTP_Password}**, **{FTP_Server}** based on your environment.
 
 ## Typical Network Diagram
 
