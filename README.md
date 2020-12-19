@@ -101,6 +101,7 @@ Sample **show clock** output
 
 ```01:58:40.092 HKT Sun Dec 20 2020'''
 
+**Regexp** action command to parse **show clock* ouput
 
 
 ## Typical Network Diagram
