@@ -35,10 +35,10 @@ For details of version and device compatiblity for EEM 4.0, please visit [Cisco 
 To install the script. Login to router or switch at "enable" mode and then "configure terminal" mode
 
 ### Enter Configure Terminal mode
-'''configure terminal'''
+```configure terminal```
 
 ### Input the script
-'''event manager applet PM_Health_Check-To-FTP
+''' event manager applet PM_Health_Check-To-FTP
  description PreventiveMaint_Health_Check-To-FTP
  event timer cron name Daily cron-entry "05 02 * * *"
  action 0.01  info type routername
