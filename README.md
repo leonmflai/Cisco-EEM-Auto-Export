@@ -99,7 +99,7 @@ However, this variable will return timestamp in EPOCH format. To be more precise
 
 Sample **show clock** output
 
-```01:58:40.092 HKT Sun Dec 20 2020'''
+```01:58:40.092 HKT Sun Dec 20 2020```
 
 **Regexp** action command to parse **show clock* ouput
 ![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/regexp-EEM-command.jpg)
