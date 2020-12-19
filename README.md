@@ -112,10 +112,7 @@ Sample **show clock** output
 ## Typical Network Diagram
 
 ## Virtual Environment for Testing
-
-
-
-
+In case there is not physical router, switch for testing of this EEM script. It is fine to use virtualized environment like Cisco Modeling Labs (CML) or EVE-NG to test.
 
 
 ## Remarks
