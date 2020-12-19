@@ -115,6 +115,8 @@ Please adjust the variable **{FTP_User}**, **{FTP_Password}**, **{FTP_Server}** 
 
 ## Typical Network Diagram
 
+![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/EEM-Auto-Export-Diagram.jpg)
+
 ## Virtual Environment for Testing
 In case there is not physical router, switch for testing of this EEM script. It is fine to use virtualized environment like Cisco Modeling Labs (CML) or EVE-NG to test.
 
