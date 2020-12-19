@@ -72,6 +72,7 @@ To install the script. Login to router or switch at "enable" mode and then "conf
 ```
 ## Elaboration of Scripts
 
+### Schedule / Time Interval
 To adjust the schedule and interval to run the script, we need to adjust the interval of following command
 
 ```event timer cron name Daily cron-entry "05 02 * * *"```
@@ -79,6 +80,18 @@ To adjust the schedule and interval to run the script, we need to adjust the int
 The syntax of **"event timer cron"** is very similar to Linux cron schedule. The syntax is in following
 
 ![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/EEM-Cron-Event-Timer.jpg)
+
+### Backup File Name including **device** hostname
+
+To include router / switch hostname in backup file name, we need following command
+``` action 0.01  info type routername```
+
+**routername** is one of the default variable in EEM where **info type** command will instruct the EEM engine to call default variable
+
+For details, refer to [EEM Built-in "Action" Variables](https://community.cisco.com/t5/networking-documents/eem-built-in-quot-action-quot-variables/ta-p/3123406) by Joe Clarke.
+
+### Backup File Name including Timestamp 
+
 
 
 
