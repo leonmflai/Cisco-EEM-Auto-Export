@@ -32,7 +32,42 @@ For details of version and device compatiblity for EEM 4.0, please visit [Cisco 
 
 ## Installation
 
+To install the script. Login to router or switch at "enable" mode and then "configure terminal" mode
 
+### Enter Configure Terminal mode
+'configure terminal
+
+### Input the script
+'event manager applet PM_Health_Check-To-FTP
+ description PreventiveMaint_Health_Check-To-FTP
+ event timer cron name Daily cron-entry "05 02 * * *"
+ action 0.01  info type routername
+ action 1.01 cli command "enable"
+ action 1.02 cli command "show clock"
+ action 1.03 regexp "(2[0-3]|[01][0-9]):([0-6][0-9]):([0-6][0-9])" "$_cli_result" time hour minute second
+ action 1.04 puts "$time"
+ action 1.05 puts "$hour"
+ action 1.06 puts "$minute"
+ action 1.07 puts "$second"
+ action 1.11 cli command "show clock"
+ action 1.12 regexp "(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([1-9]|0[1-9]|[1-2][0-9]|3[0-1]) (20[1-9][0-9])" "$_cli_result" time2 month day year
+ action 1.13 puts "$time2"
+ action 1.14 puts "$month"
+ action 1.15 puts "$day"
+ action 1.16 puts "$year"
+ action 2.01 cli command "configure terminal"
+ action 2.02 cli command "file prompt quiet"
+ action 2.03 cli command "do copy run flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.04 cli command "do show inventory | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.05 cli command "do show version | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.06 cli command "do show process mem sorted | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.07 cli command "do show interface status | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.08 cli command "do show interface | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.09 cli command "do show clock | append flash:$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 2.10 cli command "do copy flash:$_info_routername-$year$month$day-$hour$minute$second.txt ftp://{FTP_User}:{FTP_Password}@{FTP_Server}/$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 3.01 cli command "file prompt alert"
+ action 3.02 puts "$_info_routername-$year$month$day-$hour$minute$second.txt"
+ action 4.01 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"
 
 
 ## Elaboration of Scripts
