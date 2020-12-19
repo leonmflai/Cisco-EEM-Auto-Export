@@ -70,8 +70,15 @@ To install the script. Login to router or switch at "enable" mode and then "conf
  action 3.02 puts "$_info_routername-$year$month$day-$hour$minute$second.txt"
  action 4.01 syslog priority informational msg "Configuration change detected. Write to TFTP succesfully executed"
 ```
-
 ## Elaboration of Scripts
+
+To adjust the schedule and interval to run the script, we need to adjust the interval of following command
+
+```event timer cron name Daily cron-entry "05 02 * * *"```
+
+The syntax of **"event timer cron"** is very similar to Linux cron schedule. 
+
+
 
 ## Typical Network Diagram
 
