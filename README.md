@@ -78,7 +78,7 @@ To adjust the schedule and interval to run the script, we need to adjust the int
 
 The syntax of **"event timer cron"** is very similar to Linux cron schedule. The syntax is in following
 
-![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/EEM-Cron-Event-Timer.jpg_)
+![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/EEM-Cron-Event-Timer.jpg)
 
 
 
