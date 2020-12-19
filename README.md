@@ -99,28 +99,31 @@ However, this variable will return timestamp in EPOCH format. To be more precise
 
 Sample **show clock** output
 
-```01:58:40.092 HKT Sun Dec 20 2020'''
+```01:58:40.092 HKT Sun Dec 20 2020```
 
-**Regexp** action command to parse **show clock* ouput
+**Regexp** action command to parse **show clock** ouput. This action command can store whole matched string of the regular expression checking into a variable. Meanwhile, it can also store string-submatch output to a maximum of three submatch variables.
 
+![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/regexp-EEM-command.jpg)
+
+### FTP the output file to server
+
+To send out the backup file to FTP server, use following code.
+
+``` action 2.10 cli command "do copy flash:$_info_routername-$year$month$day-$hour$minute$second.txt ftp://{FTP_User}:{FTP_Password}@{FTP_Server}/ ```
+
+Please adjust the variable **{FTP_User}**, **{FTP_Password}**, **{FTP_Server}** based on your environment.
 
 ## Typical Network Diagram
 
 ## Virtual Environment for Testing
+In case there is not physical router, switch for testing of this EEM script. It is fine to use virtualized environment like Cisco Modeling Labs (CML) or EVE-NG to test.
 
 
-
-
-With latest API, configuration management tools like Python RestAPI, YANG, NetCONF, RestCONF, JSON/XML, Ansible, Puppet, Terraform, there are plenty of channels to retrieve the output, status, settings of the network devices. Some network management platform or plugin like Solarwinds NCM, ManageEngine Network Configuration Manager can support more advanced configuration management like regular configuration, setting backup or even execute configuration change in predefined schedule. 
-
-Except leveraging API programming tools, most of the commercial available tools requires subscription charges or a upfront costing. 
-
-With API programming tools, it still requires a software agent resides on a server, container or even a docker because utlitilizing off-box programming interfaces of network devices. Instead of having programming code outside the network devices, Cisco allows customer run simplified programming codes on their ISR routers, ASR Routers, Catalyst Switches, Nexus Switche or even some latest Catalyst 9800 wireless controllers.
-
+## Remarks
 For more information, please refer to following document:
 Understanding Cisco EEM by examples Part 1
 [Refence Link] https://learningnetwork.cisco.com/s/article/understanding-cisco-eem-by-examples-part-1 
 
-This project and repo aims at scheduled configuration and status backup to a FTP server regulary. The filename of the backup will combines devices hostname as well as timestamp. I hope this will make networking guy start to understand more about value of coding and automation.
+
 
 
