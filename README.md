@@ -18,9 +18,11 @@ Once this script run, it will collect corresponding CLI command automatically an
 
 ## What IOS version and Devices can support this EEM script?
 
-This script mainly utilizes "regexp" command in EEM command reference. According to Cisco command reference [Cisco EEM Command Reference](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/eem/command/eem-cr-book/eem-cr-a1.html#wp1168104291). Minimal IOS version version to run "regexp" command is 
+This script mainly utilizes "regexp" command in EEM command reference. According to Cisco command reference [Cisco EEM Command Reference](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/eem/command/eem-cr-book/eem-cr-a1.html#wp1168104291). Minimal IOS version version to run "regexp" command is 12.4(22)T or 12.2(33)SRE. According to Cisco [EEM version histroy](https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2015/pdf/LABNMS-2001-LG.pdf), that command was introduced in EEM vesrion 3.0.
 
+![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/regexp-ios-version.jpg)
 
+Currently, a variety of 
 
 ## Installation
 
