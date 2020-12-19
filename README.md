@@ -21,9 +21,14 @@ Once this script run, it will collect corresponding CLI command automatically an
 This script mainly utilizes "regexp" command in EEM command reference. According to Cisco command reference [Cisco EEM Command Reference](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/eem/command/eem-cr-book/eem-cr-a1.html#wp1168104291). Minimal IOS version version to run "regexp" command is 12.4(22)T or 12.2(33)SRE. According to Cisco [EEM version histroy](https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2015/pdf/LABNMS-2001-LG.pdf), that command was introduced in EEM vesrion 3.0.
 
 ![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/regexp-ios-version.jpg)
+
 ![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/EEM%20Version%20History.jpg)
 
-Currently, a variety of 
+However, to run this script smoothly, we recommend you should run with the latest EEM version. Currently, it is EEM 4.0.
+
+Currently, a variety of network devices including Cisco ISR-G2/4K, Catalyst 3650,3850,9300,4500 switch, Nexus 3K/7K/9K data center siwtch with IOS or NXOS version can support EEM 4.0. For example, Cisco Catalyst 9300 Switch with version Release Gibraltar-16.12.4 can support EEM 4.0.
+
+For details of version and device compatiblity for EEM 4.0, please visit [Cisco Feature Netvigator](https://cfnng.cisco.com/)
 
 ## Installation
 
