@@ -20,9 +20,9 @@ Once this script run, it will collect corresponding CLI command automatically an
 
 This script mainly utilizes "regexp" command in EEM command reference. According to Cisco command reference [Cisco EEM Command Reference](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/eem/command/eem-cr-book/eem-cr-a1.html#wp1168104291). Minimal IOS version version to run "regexp" command is 12.4(22)T or 12.2(33)SRE. According to Cisco [EEM version histroy](https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2015/pdf/LABNMS-2001-LG.pdf), that command was introduced in EEM vesrion 3.0.
 
-![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/regexp-ios-version.jpg)
+![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/JPG/regexp-ios-version.jpg)
 
-![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/EEM%20Version%20History.jpg)
+![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/JPG/EEM-Version-History.jpg)
 
 However, to run this script smoothly, we recommend you should run with the latest EEM version. Currently, it is EEM 4.0.
 
@@ -79,7 +79,7 @@ To adjust the schedule and interval to run the script, we need to adjust the int
 
 The syntax of **"event timer cron"** is very similar to Linux cron schedule. The syntax is in following
 
-![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/EEM-Cron-Event-Timer.jpg)
+![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/JPG/EEM-Cron-Event-Timer.jpg)
 
 ### Backup File Name including **device** hostname
 
@@ -103,7 +103,7 @@ Sample **show clock** output
 
 **Regexp** action command to parse **show clock** ouput. This action command can store whole matched string of the regular expression checking into a variable. Meanwhile, it can also store string-submatch output to a maximum of three submatch variables.
 
-![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/regexp-EEM-command.jpg)
+![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/JPG/regexp-EEM-command.jpg)
 
 ### FTP the output file to server
 
@@ -115,7 +115,7 @@ Please adjust the variable **{FTP_User}**, **{FTP_Password}**, **{FTP_Server}** 
 
 ## Typical Network Diagram
 
-![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/EEM-Auto-Export-Diagram.jpg)
+![Image](https://github.com/leonmflai/Cisco-EEM-Auto-Export/blob/master/JPG/EEM-Auto-Export-Diagram.jpg)
 
 ## Virtual Environment for Testing
 In case there is not physical router, switch for testing of this EEM script. It is fine to use virtualized environment like Cisco Modeling Labs (CML) or EVE-NG to test.
